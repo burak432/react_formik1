@@ -15,22 +15,26 @@ const Basic = () => (
         alert(JSON.stringify(values, null, 2));
       }}
     >
-      <Form>
-        <label htmlFor="firstName">First Name</label>
-        <Field id="firstName" name="firstName" placeholder="Jane" />
-
-        <label htmlFor="lastName">Last Name</label>
-        <Field id="lastName" name="lastName" placeholder="Doe" />
-
-        <label htmlFor="email">Email</label>
-        <Field
-          id="email"
-          name="email"
-          placeholder="jane@acme.com"
-          type="email"
-        />
-        <button type="submit">Submit</button>
-      </Form>
+      {({ handleSubmit, handleChange }) => (
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="firstName">First Name</label>
+            <input id="firstName" name="firstName" onChange={handleChange} />
+          </div>
+          <br />
+          <div>
+            <label htmlFor="lastName">Last Name</label>
+            <input id="lastName" name="lastName" />
+          </div>
+          <br />
+          <div>
+            <label htmlFor="email">Email</label>
+            <input id="email" name="email" type="email" />
+          </div>
+          <br />
+          <button type="submit">Submit</button>
+        </form>
+      )}
     </Formik>
   </div>
 );

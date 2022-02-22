@@ -1,3 +1,4 @@
-# react-azwpr9
+# react- formik
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-azwpr9)
+- Practicing form management with formik
+
